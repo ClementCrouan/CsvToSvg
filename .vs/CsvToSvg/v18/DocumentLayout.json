@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\transformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\transformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\transformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\transformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\forme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,19 +34,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Dessin.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Dessin.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Dessin.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Dessin.cs",
               "RelativeToolTip": "CsvToSvg\\Dessin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T15:01:10.888Z"
+              "WhenOpened": "2026-04-21T15:01:10.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,14 +57,14 @@
               "RelativeDocumentMoniker": "CsvToSvg\\Exceptions.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Exceptions.cs",
               "RelativeToolTip": "CsvToSvg\\Exceptions.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T15:00:36.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Transformations.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Transformations.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Transformations.cs",
@@ -100,13 +101,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Program.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Program.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Program.cs",
               "RelativeToolTip": "CsvToSvg\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T12:48:25.53Z",
               "EditorCaption": ""

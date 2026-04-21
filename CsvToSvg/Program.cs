@@ -22,10 +22,13 @@ namespace CsvToSvg
             }
             else
             {
-                cheminCsv = "demo.csv";
-                cheminSvg = "demo.svg";
-                CreerCsvDemo(cheminCsv);
-                Console.WriteLine($"Fichier de démonstration créé : {cheminCsv}");
+                cheminCsv = "exemple4.csv";
+                cheminSvg = "exemple4.svg";
+                if (!File.Exists(cheminCsv))
+                {
+                    CreerCsvDemo(cheminCsv);
+                    Console.WriteLine($"Fichier de démonstration créé : {cheminCsv}");
+                }
             }
 
             Console.WriteLine($"Lecture  : {cheminCsv}");
