@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <circle cx="100.0" cy="50.0" r="40.0" style="fill:rgb(255,255,0)" />
+  <rect x="110.0" y="70.0" width="300.0" height="100.0" style="fill:rgb(0,0,255)" transform="translate(20.0,10.0)" />
+  <ellipse cx="250.0" cy="200.0" rx="80.0" ry="40.0" style="fill:rgb(255,0,0)" transform="rotate(30.0 250.0,200.0)" />
+  <polygon points="50,150 100,50 150,150" style="fill:rgb(0,200,100)" />
+  <path d="M 200 300 L 300 300 L 250 200 Z" style="fill:rgb(128,0,128)" />
+  <text x="50.0" y="350.0" fill="rgb(0,0,0)">Bonjour SVG</text>
+</svg>

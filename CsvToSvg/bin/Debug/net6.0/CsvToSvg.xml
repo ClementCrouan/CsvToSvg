@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CsvToSvg</name>
+    </assembly>
+    <members>
+        <member name="T:CsvToSvg.Dessin">
+            <summary>
+            Représente un dessin complet, correspondant à un fichier CSV.
+            Cette classe centralise la lecture du CSV et l'écriture du SVG.
+            </summary>
+            <remarks>
+            Modélisation :
+            - La lecture CSV est attachée à <see cref="T:CsvToSvg.Dessin"/> car c'est au niveau
+              du fichier entier qu'on sait interpréter l'ensemble des lignes et
+              résoudre les transformations (les lignes Translation/Rotation
+              référencent d'autres éléments par id).
+            - L'écriture SVG est également attachée à <see cref="T:CsvToSvg.Dessin"/> : c'est
+              lui qui connaît l'ordre global d'affichage et génère l'enveloppe SVG.
+              Chaque <see cref="T:CsvToSvg.Forme"/> sait seulement générer sa propre balise via
+              <see cref="M:CsvToSvg.Forme.ToSvg"/>.
+            - Les éléments sont écrits dans l'ordre croissant de leur propriété
+              <see cref="P:CsvToSvg.Forme.Ordre"/> grâce à un tri avant génération.
+            </remarks>
+        </member>
+        <member name="F:CsvToSvg.Dessin._formes">
+            <summary>Liste de toutes les formes du dessin.</summary>
+        </member>
+        <member name="M:CsvToSvg.Dessin.LireCsv(System.String)">
+            <summary>
+            Lit un fichier CSV (séparateur ';') et remplit le dessin avec les formes
+            et transformations qu'il décrit.
+            </summary>
+            <param name="cheminCsv">Chemin relatif ou absolu du fichier CSV.</param>
+            <exception cref="T:CsvToSvg.FichierException">Le fichier est introuvable ou illisible.</exception>
+            <exception cref="T:CsvToSvg.LigneCsvInvalideException">Une ligne est mal formée.</exception>
+            <exception cref="T:CsvToSvg.FormeInconnueException">Un type de forme est inconnu.</exception>
+            <exception cref="T:CsvToSvg.CouleurInvalideException">Une valeur RGB est hors [0,255].</exception>
+        </member>
+        <member name="M:CsvToSvg.Dessin.EcrireSvg(System.String)">
+            <summary>
+            Convertit le dessin en fichier SVG et l'enregistre sur le disque.
+            Les éléments sont écrits dans l'ordre croissant de leur propriété
+            <see cref="P:CsvToSvg.Forme.Ordre"/>, garantissant ainsi un affichage correct.
+            </summary>
+            <param name="cheminSvg">Chemin de destination du fichier SVG.</param>
+            <exception cref="T:CsvToSvg.FichierException">Impossible d'écrire le fichier.</exception>
+        </member>
+        <member name="T:CsvToSvg.FormeInconnueException">
+            <summary>
+            Exception levée lorsqu'un type de forme inconnu est rencontré dans le CSV.
+            </summary>
+        </member>
+        <member name="M:CsvToSvg.FormeInconnueException.#ctor(System.String)">
+            <summary>
+            Initialise une nouvelle instance de <see cref="T:CsvToSvg.FormeInconnueException"/>.
+            </summary>
+            <param name="typeForme">Le type de forme non reconnu.</param>
+        </member>
+        <member name="T:CsvToSvg.LigneCsvInvalideException">
+            <summary>
+            Exception levée lorsqu'une ligne CSV est mal formée (nombre de colonnes incorrect,
+            valeurs non numériques, etc.).
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.LigneCsvInvalideException.NumeroLigne">
+            <summary>Numéro de la ligne fautive dans le fichier CSV.</summary>
+        </member>
+        <member name="P:CsvToSvg.LigneCsvInvalideException.LigneBrute">
+            <summary>Contenu brut de la ligne fautive.</summary>
+        </member>
+        <member name="M:CsvToSvg.LigneCsvInvalideException.#ctor(System.Int32,System.String,System.String,System.Exception)">
+            <summary>
+            Initialise une nouvelle instance de <see cref="T:CsvToSvg.LigneCsvInvalideException"/>.
+            </summary>
+            <param name="numeroLigne">Numéro de la ligne (base 1).</param>
+            <param name="ligneBrute">Contenu brut de la ligne.</param>
+            <param name="message">Message décrivant le problème.</param>
+            <param name="innerException">Exception interne éventuelle.</param>
+        </member>
+        <member name="T:CsvToSvg.CouleurInvalideException">
+            <summary>
+            Exception levée lorsqu'une couleur RGB contient une valeur hors intervalle [0, 255].
+            </summary>
+        </member>
+        <member name="M:CsvToSvg.CouleurInvalideException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initialise une nouvelle instance de <see cref="T:CsvToSvg.CouleurInvalideException"/>.
+            </summary>
+            <param name="composante">Nom de la composante fautive (R, G ou B).</param>
+            <param name="valeur">Valeur erronée.</param>
+        </member>
+        <member name="T:CsvToSvg.FichierException">
+            <summary>
+            Exception levée lorsqu'un fichier CSV ou SVG ne peut pas être lu ou écrit.
+            </summary>
+        </member>
+        <member name="M:CsvToSvg.FichierException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initialise une nouvelle instance de <see cref="T:CsvToSvg.FichierException"/>.
+            </summary>
+            <param name="chemin">Chemin du fichier concerné.</param>
+            <param name="message">Message décrivant le problème.</param>
+            <param name="innerException">Exception interne éventuelle.</param>
+        </member>
+        <member name="T:CsvToSvg.Forme">
+            <summary>
+            Classe abstraite représentant une forme géométrique.
+            Toutes les formes héritent de cette classe.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.IdElement">
+            <summary>Identifiant unique de l'élément.</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.R">
+            <summary>Composante rouge de la couleur de remplissage (0-255).</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.G">
+            <summary>Composante verte de la couleur de remplissage (0-255).</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.B">
+            <summary>Composante bleue de la couleur de remplissage (0-255).</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.Ordre">
+            <summary>Ordre d'affichage dans le fichier SVG (1 = premier).</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.TranslationForme">
+            <summary>Transformation de translation associée à cette forme (peut être null).</summary>
+        </member>
+        <member name="P:CsvToSvg.Forme.RotationForme">
+            <summary>Transformation de rotation associée à cette forme (peut être null).</summary>
+        </member>
+        <member name="M:CsvToSvg.Forme.GetTransformAttribute">
+            <summary>
+            Génère la chaîne d'attribut de transformation SVG.
+            Combine rotation et/ou translation si elles sont définies.
+            </summary>
+            <returns>Attribut transform SVG ou chaîne vide.</returns>
+        </member>
+        <member name="M:CsvToSvg.Forme.ToSvg">
+            <summary>
+            Génère la représentation SVG de la forme.
+            Doit être implémentée par chaque sous-classe.
+            </summary>
+            <returns>Balise SVG correspondant à la forme.</returns>
+        </member>
+        <member name="T:CsvToSvg.Cercle">
+            <summary>
+            Représente un cercle.
+            csv : Cercle;idElement;cx;cy;r;R;G;B;ordre
+            svg : &lt;circle cx="..." cy="..." r="..." style="fill:rgb(...)" /&gt;
+            Transformations : translation uniquement.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Cercle.Cx">
+            <summary>Coordonnée X du centre.</summary>
+        </member>
+        <member name="P:CsvToSvg.Cercle.Cy">
+            <summary>Coordonnée Y du centre.</summary>
+        </member>
+        <member name="P:CsvToSvg.Cercle.Rayon">
+            <summary>Rayon du cercle.</summary>
+        </member>
+        <member name="M:CsvToSvg.Cercle.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Ellipse">
+            <summary>
+            Représente une ellipse.
+            csv : Ellipse;idElement;cx;cy;rx;ry;R;G;B;ordre
+            svg : &lt;ellipse cx="..." cy="..." rx="..." ry="..." style="fill:rgb(...)" /&gt;
+            Transformations : translation, rotation.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Ellipse.Cx">
+            <summary>Coordonnée X du centre.</summary>
+        </member>
+        <member name="P:CsvToSvg.Ellipse.Cy">
+            <summary>Coordonnée Y du centre.</summary>
+        </member>
+        <member name="P:CsvToSvg.Ellipse.Rx">
+            <summary>Rayon horizontal.</summary>
+        </member>
+        <member name="P:CsvToSvg.Ellipse.Ry">
+            <summary>Rayon vertical.</summary>
+        </member>
+        <member name="M:CsvToSvg.Ellipse.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Rectangle">
+            <summary>
+            Représente un rectangle.
+            csv : Rectangle;idElement;x;y;l;h;R;G;B;ordre
+            svg : &lt;rect x="..." y="..." width="..." height="..." style="fill:rgb(...)" /&gt;
+            Transformations : translation, rotation.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Rectangle.X">
+            <summary>Coordonnée X du coin supérieur gauche.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rectangle.Y">
+            <summary>Coordonnée Y du coin supérieur gauche.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rectangle.Largeur">
+            <summary>Largeur du rectangle.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rectangle.Hauteur">
+            <summary>Hauteur du rectangle.</summary>
+        </member>
+        <member name="M:CsvToSvg.Rectangle.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Polygone">
+            <summary>
+            Représente un polygone plein défini par une série de points.
+            csv : Polygone;idElement;points;R;G;B;ordre
+            svg : &lt;polygon points="..." style="fill:rgb(...)" /&gt;
+            Transformations : rotation uniquement.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Polygone.Points">
+            <summary>Série de points du polygone (format SVG : "x1,y1 x2,y2 ...").</summary>
+        </member>
+        <member name="M:CsvToSvg.Polygone.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Chemin">
+            <summary>
+            Représente un chemin (path) SVG arbitraire.
+            csv : Chemin;idElement;path;R;G;B;ordre
+            svg : &lt;path d="..." style="fill:rgb(...)" /&gt;
+            Transformations : rotation uniquement.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Chemin.PathData">
+            <summary>Données de chemin SVG (attribut d).</summary>
+        </member>
+        <member name="M:CsvToSvg.Chemin.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Texte">
+            <summary>
+            Représente un texte affiché à une position donnée.
+            csv : Texte;idElement;x;y;contenu;R;G;B;ordre
+            svg : &lt;text x="..." y="..." fill="rgb(...)"&gt;...&lt;/text&gt;
+            Transformations : translation, rotation.
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Texte.X">
+            <summary>Coordonnée X de la position du texte.</summary>
+        </member>
+        <member name="P:CsvToSvg.Texte.Y">
+            <summary>Coordonnée Y de la position du texte.</summary>
+        </member>
+        <member name="P:CsvToSvg.Texte.Contenu">
+            <summary>Contenu textuel à afficher.</summary>
+        </member>
+        <member name="M:CsvToSvg.Texte.ToSvg">
+            <inheritdoc/>
+        </member>
+        <member name="T:CsvToSvg.Program">
+            <summary>
+            Point d'entree du programme de conversion CSV vers SVG.
+            CHANGER LE FICHIER CSV : modifiez la constante FICHIER_CSV ci-dessous.
+            Conseil : utilisez un chemin absolu ex. @"C:\TP\monDessin.csv"
+            </summary>
+        </member>
+        <member name="M:CsvToSvg.Program.CreerCsvDemo(System.String)">
+            <summary>
+            Genere un fichier CSV de demonstration contenant toutes les formes.
+            </summary>
+        </member>
+        <member name="T:CsvToSvg.Translation">
+            <summary>
+            Représente une transformation de translation appliquée à une forme.
+            csv : Translation;idElement;dx;dy
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Translation.IdElement">
+            <summary>Identifiant de l'élément cible.</summary>
+        </member>
+        <member name="P:CsvToSvg.Translation.Dx">
+            <summary>Déplacement horizontal.</summary>
+        </member>
+        <member name="P:CsvToSvg.Translation.Dy">
+            <summary>Déplacement vertical.</summary>
+        </member>
+        <member name="M:CsvToSvg.Translation.ToSvgTransform">
+            <summary>
+            Génère la valeur SVG de la transformation de translation.
+            </summary>
+            <returns>Chaîne translate(...) pour l'attribut transform SVG.</returns>
+        </member>
+        <member name="T:CsvToSvg.Rotation">
+            <summary>
+            Représente une transformation de rotation appliquée à une forme.
+            csv : Rotation;idElement;alpha;cx;cy
+            </summary>
+        </member>
+        <member name="P:CsvToSvg.Rotation.IdElement">
+            <summary>Identifiant de l'élément cible.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rotation.Alpha">
+            <summary>Angle de rotation en degrés.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rotation.Cx">
+            <summary>Coordonnée X du centre de rotation.</summary>
+        </member>
+        <member name="P:CsvToSvg.Rotation.Cy">
+            <summary>Coordonnée Y du centre de rotation.</summary>
+        </member>
+        <member name="M:CsvToSvg.Rotation.ToSvgTransform">
+            <summary>
+            Génère la valeur SVG de la transformation de rotation.
+            </summary>
+            <returns>Chaîne rotate(...) pour l'attribut transform SVG.</returns>
+        </member>
+    </members>
+</doc>
