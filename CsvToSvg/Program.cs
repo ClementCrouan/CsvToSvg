@@ -3,27 +3,10 @@ using System.IO;
 
 namespace CsvToSvg
 {
-    /// <summary>
-    /// Point d'entree du programme de conversion CSV vers SVG.
-    /// CHANGER LE FICHIER CSV : modifiez la constante FICHIER_CSV ci-dessous.
-    /// Conseil : utilisez un chemin absolu ex. @"C:\TP\monDessin.csv"
-    /// </summary>
     class Program
     {
-        // ┌──────────────────────────────────────────────────────────┐
-        // │   MODIFIEZ CES DEUX LIGNES POUR CHANGER LES FICHIERS     │
-        // │   Chemin absolu recommande : @"C:\dossier\fichier.csv"   │
-        // └──────────────────────────────────────────────────────────┘
-        private const string FICHIER_CSV = "exemple2.csv";   // <- votre CSV ici
-        private const string FICHIER_SVG = "exemple2.svg";   // <- SVG genere ici
-
         static void Main(string[] args)
         {
-            Console.WriteLine("=== CsvToSvg ===");
-            Console.WriteLine("Dossier courant : " + Directory.GetCurrentDirectory());
-            Console.WriteLine("(Deposez votre CSV dans ce dossier si chemin relatif)");
-            Console.WriteLine();
-
             string cheminCsv;
             string cheminSvg;
 
@@ -39,57 +22,29 @@ namespace CsvToSvg
             }
             else
             {
-                cheminCsv = FICHIER_CSV;
-                cheminSvg = FICHIER_SVG;
-
-                if (!File.Exists(cheminCsv))
-                {
-                    CreerCsvDemo(cheminCsv);
-                    Console.WriteLine("Demo cree : " + Path.GetFullPath(cheminCsv));
-                }
+                cheminCsv = "demo.csv";
+                cheminSvg = "demo.svg";
+                CreerCsvDemo(cheminCsv);
+                Console.WriteLine($"Fichier de démonstration créé : {cheminCsv}");
             }
 
-            Console.WriteLine("Lecture  : " + Path.GetFullPath(cheminCsv));
-            Console.WriteLine("Ecriture : " + Path.GetFullPath(cheminSvg));
-            Console.WriteLine();
+            Console.WriteLine($"Lecture  : {cheminCsv}");
+            Console.WriteLine($"Écriture : {cheminSvg}");
 
             try
             {
                 var dessin = new Dessin();
                 dessin.LireCsv(cheminCsv);
                 dessin.EcrireSvg(cheminSvg);
-                Console.WriteLine("Conversion reussie !");
-                Console.WriteLine("SVG genere : " + Path.GetFullPath(cheminSvg));
+                Console.WriteLine("Conversion réussie !");
             }
-            catch (FichierException ex)
-            {
-                Console.Error.WriteLine("[ERREUR FICHIER] " + ex.Message);
-            }
-            catch (LigneCsvInvalideException ex)
-            {
-                Console.Error.WriteLine("[ERREUR CSV] " + ex.Message);
-            }
-            catch (FormeInconnueException ex)
-            {
-                Console.Error.WriteLine("[ERREUR FORME] " + ex.Message);
-            }
-            catch (CouleurInvalideException ex)
-            {
-                Console.Error.WriteLine("[ERREUR COULEUR] " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine("[ERREUR INATTENDUE] " + ex.Message);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("Appuyez sur une touche pour fermer...");
-            Console.ReadKey();
+            catch (FichierException ex)         { Console.Error.WriteLine($"[ERREUR FICHIER]  {ex.Message}"); }
+            catch (LigneCsvInvalideException ex) { Console.Error.WriteLine($"[ERREUR CSV]      {ex.Message}"); }
+            catch (FormeInconnueException ex)    { Console.Error.WriteLine($"[ERREUR FORME]    {ex.Message}"); }
+            catch (CouleurInvalideException ex)  { Console.Error.WriteLine($"[ERREUR COULEUR]  {ex.Message}"); }
+            catch (Exception ex)                 { Console.Error.WriteLine($"[ERREUR]          {ex.Message}"); }
         }
 
-        /// <summary>
-        /// Genere un fichier CSV de demonstration contenant toutes les formes.
-        /// </summary>
         private static void CreerCsvDemo(string chemin)
         {
             string contenu =

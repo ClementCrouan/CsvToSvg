@@ -30,3 +30,4 @@ C:\Users\croua\Documents\GitHub\CsvToSvg\CsvToSvg\obj\Debug\net6.0\CsvToSvg.xml
 C:\Users\croua\Documents\GitHub\CsvToSvg\CsvToSvg\obj\Debug\net6.0\CsvToSvg.pdb
 C:\Users\croua\Documents\GitHub\CsvToSvg\CsvToSvg\obj\Debug\net6.0\CsvToSvg.genruntimeconfig.cache
 C:\Users\croua\Documents\GitHub\CsvToSvg\CsvToSvg\obj\Debug\net6.0\ref\CsvToSvg.dll
+C:\Users\croua\Documents\GitHub\CsvToSvg\CsvToSvg\obj\Debug\net6.0\CsvToSvg.sourcelink.json

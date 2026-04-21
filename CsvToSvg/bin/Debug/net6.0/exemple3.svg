@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <path d="M 75,13.879749 L 90.3454,60.62831 L 139.26563,60.571469 L 99.5471,89.611899 L 114.71834,136.12025 L 74.825551,107.31967 L 35.281661,136.12024 L 50.345081,89.280069 L 10.73437,60.571459 L 59.936881,60.423219 L 75,13.879749 z" style="fill:rgb(255,0,255)" />
+  <circle cx="0" cy="0" r="3" style="fill:rgb(0,255,0)" transform="translate(75,13)" />
+  <circle cx="0" cy="0" r="3" style="fill:rgb(0,255,0)" transform="translate(10,61)" />
+  <circle cx="0" cy="0" r="3" style="fill:rgb(0,255,0)" transform="translate(140,61)" />
+  <circle cx="0" cy="0" r="3" style="fill:rgb(0,255,0)" transform="translate(115,136)" />
+  <circle cx="0" cy="0" r="3" style="fill:rgb(0,255,0)" transform="translate(35,136)" />
+</svg>
