@@ -1,6 +1,6 @@
 namespace CsvToSvg
 {
-    public class Translation : ITransformation
+    class Translation : ITransformation
     {
         public int IdElement { get; set; }
         public double Dx { get; set; }
@@ -12,7 +12,7 @@ namespace CsvToSvg
         }
     }
 
-    public class Rotation : ITransformation
+    class Rotation : ITransformation
     {
         public int IdElement { get; set; }
         public double Alpha { get; set; }

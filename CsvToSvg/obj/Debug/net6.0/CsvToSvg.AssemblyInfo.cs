@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CsvToSvg")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45e7fcd804023ad832db3d16c940f8db485ec461")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4e8ddb6d0ff7a8a847f2087b8917ae56176ac60")]
 [assembly: System.Reflection.AssemblyProductAttribute("CsvToSvg")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CsvToSvg")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

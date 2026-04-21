@@ -1,6 +1,6 @@
 namespace CsvToSvg
 {
-    public abstract class Forme
+    abstract class Forme
     {
         public int IdElement { get; set; }
         public int R { get; set; }
@@ -12,7 +12,7 @@ namespace CsvToSvg
 
         protected string GetTransformAttribute()
         {
-            string rotate = RotationForme != null ? RotationForme.ToSvgTransform() : null;
+            string rotate    = RotationForme    != null ? RotationForme.ToSvgTransform()    : null;
             string translate = TranslationForme != null ? TranslationForme.ToSvgTransform() : null;
 
             if (rotate != null && translate != null)

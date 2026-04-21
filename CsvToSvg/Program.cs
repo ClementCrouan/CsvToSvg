@@ -22,8 +22,8 @@ namespace CsvToSvg
             }
             else
             {
-                cheminCsv = "exemple4.csv";
-                cheminSvg = "exemple4.svg";
+                cheminCsv = "exemple1.csv";
+                cheminSvg = "exemple1.svg";
                 if (!File.Exists(cheminCsv))
                 {
                     CreerCsvDemo(cheminCsv);
@@ -31,24 +31,17 @@ namespace CsvToSvg
                 }
             }
 
-            Console.WriteLine($"Lecture  : {cheminCsv}");
-            Console.WriteLine($"Écriture : {cheminSvg}");
+            Console.WriteLine("Lecture  : " + cheminCsv);
+            Console.WriteLine("Ecriture : " + cheminSvg);
 
-            try
-            {
-                var dessin = new Dessin();
-                dessin.LireCsv(cheminCsv);
-                dessin.EcrireSvg(cheminSvg);
-                Console.WriteLine("Conversion réussie !");
-            }
-            catch (FichierException ex)         { Console.Error.WriteLine($"[ERREUR FICHIER]  {ex.Message}"); }
-            catch (LigneCsvInvalideException ex) { Console.Error.WriteLine($"[ERREUR CSV]      {ex.Message}"); }
-            catch (FormeInconnueException ex)    { Console.Error.WriteLine($"[ERREUR FORME]    {ex.Message}"); }
-            catch (CouleurInvalideException ex)  { Console.Error.WriteLine($"[ERREUR COULEUR]  {ex.Message}"); }
-            catch (Exception ex)                 { Console.Error.WriteLine($"[ERREUR]          {ex.Message}"); }
+            Dessin dessin = new Dessin();
+            dessin.LireCsv(cheminCsv);
+            dessin.EcrireSvg(cheminSvg);
+
+            Console.WriteLine("Conversion terminee !");
         }
 
-        private static void CreerCsvDemo(string chemin)
+        static void CreerCsvDemo(string chemin)
         {
             string contenu =
                 "Cercle;1;100;50;40;255;255;0;1\n" +

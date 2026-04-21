@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CsvToSvg
 {
-    public class CollectionTransformations : IEnumerable<ITransformation>
+    class CollectionTransformations : IEnumerable<ITransformation>
     {
-        private readonly List<ITransformation> _transformations = new List<ITransformation>();
+        private List<ITransformation> _transformations = new List<ITransformation>();
 
-        public int Count => _transformations.Count;
+        public int Count
+        {
+            get { return _transformations.Count; }
+        }
 
         public void Ajouter(ITransformation t)
         {
@@ -17,7 +19,13 @@ namespace CsvToSvg
 
         public IEnumerable<ITransformation> ObtenirPour(int idElement)
         {
-            return _transformations.Where(t => t.IdElement == idElement);
+            List<ITransformation> resultat = new List<ITransformation>();
+            foreach (ITransformation t in _transformations)
+            {
+                if (t.IdElement == idElement)
+                    resultat.Add(t);
+            }
+            return resultat;
         }
 
         public IEnumerator<ITransformation> GetEnumerator()
@@ -27,7 +35,7 @@ namespace CsvToSvg
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
+            return _transformations.GetEnumerator();
         }
     }
 }

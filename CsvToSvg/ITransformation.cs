@@ -1,6 +1,6 @@
 namespace CsvToSvg
 {
-    public interface ITransformation
+    interface ITransformation
     {
         int IdElement { get; set; }
         string ToSvgTransform();

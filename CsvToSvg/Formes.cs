@@ -1,6 +1,6 @@
 namespace CsvToSvg
 {
-    public class Cercle : Forme
+    class Cercle : Forme
     {
         public double Cx { get; set; }
         public double Cy { get; set; }
@@ -8,12 +8,11 @@ namespace CsvToSvg
 
         public override string ToSvg()
         {
-            return $"<circle cx=\"{Cx}\" cy=\"{Cy}\" r=\"{Rayon}\" " +
-                   $"style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
+            return $"<circle cx=\"{Cx}\" cy=\"{Cy}\" r=\"{Rayon}\" style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
         }
     }
 
-    public class Ellipse : Forme
+    class Ellipse : Forme
     {
         public double Cx { get; set; }
         public double Cy { get; set; }
@@ -22,12 +21,11 @@ namespace CsvToSvg
 
         public override string ToSvg()
         {
-            return $"<ellipse cx=\"{Cx}\" cy=\"{Cy}\" rx=\"{Rx}\" ry=\"{Ry}\" " +
-                   $"style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
+            return $"<ellipse cx=\"{Cx}\" cy=\"{Cy}\" rx=\"{Rx}\" ry=\"{Ry}\" style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
         }
     }
 
-    public class Rectangle : Forme
+    class Rectangle : Forme
     {
         public double X { get; set; }
         public double Y { get; set; }
@@ -36,34 +34,31 @@ namespace CsvToSvg
 
         public override string ToSvg()
         {
-            return $"<rect x=\"{X}\" y=\"{Y}\" width=\"{Largeur}\" height=\"{Hauteur}\" " +
-                   $"style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
+            return $"<rect x=\"{X}\" y=\"{Y}\" width=\"{Largeur}\" height=\"{Hauteur}\" style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
         }
     }
 
-    public class Polygone : Forme
+    class Polygone : Forme
     {
         public string Points { get; set; }
 
         public override string ToSvg()
         {
-            return $"<polygon points=\"{Points}\" " +
-                   $"style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
+            return $"<polygon points=\"{Points}\" style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
         }
     }
 
-    public class Chemin : Forme
+    class Chemin : Forme
     {
         public string PathData { get; set; }
 
         public override string ToSvg()
         {
-            return $"<path d=\"{PathData}\" " +
-                   $"style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
+            return $"<path d=\"{PathData}\" style=\"fill:rgb({R},{G},{B})\"{GetTransformAttribute()} />";
         }
     }
 
-    public class Texte : Forme
+    class Texte : Forme
     {
         public double X { get; set; }
         public double Y { get; set; }
@@ -71,8 +66,7 @@ namespace CsvToSvg
 
         public override string ToSvg()
         {
-            return $"<text x=\"{X}\" y=\"{Y}\" fill=\"rgb({R},{G},{B})\"{GetTransformAttribute()}>" +
-                   $"{Contenu}</text>";
+            return $"<text x=\"{X}\" y=\"{Y}\" fill=\"rgb({R},{G},{B})\"{GetTransformAttribute()}>{Contenu}</text>";
         }
     }
 }
