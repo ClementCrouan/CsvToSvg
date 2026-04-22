@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\exceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\mm.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\mm.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\helvetic.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\helvetic.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\collectiontransformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\collectiontransformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\forme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\forme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\formes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +31,8 @@
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\transformations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\dessin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|c:\\users\\croua\\documents\\github\\csvtosvg\\csvtosvg\\exemple1.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|CsvToSvg\\CsvToSvg.csproj|solutionrelative:csvtosvg\\exemple1.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,95 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "helvetic.csv",
+              "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\helvetic.csv",
+              "RelativeDocumentMoniker": "CsvToSvg\\helvetic.csv",
+              "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\helvetic.csv",
+              "RelativeToolTip": "CsvToSvg\\helvetic.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-04-22T21:55:50.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MM.csv",
+              "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\MM.csv",
+              "RelativeDocumentMoniker": "CsvToSvg\\MM.csv",
+              "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\MM.csv",
+              "RelativeToolTip": "CsvToSvg\\MM.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-04-22T12:34:51.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "exemple1.csv",
+              "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\exemple1.csv",
+              "RelativeDocumentMoniker": "CsvToSvg\\exemple1.csv",
+              "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\exemple1.csv",
+              "RelativeToolTip": "CsvToSvg\\exemple1.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAADBAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-04-22T12:28:00.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CollectionTransformations.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\CollectionTransformations.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\CollectionTransformations.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\CollectionTransformations.cs",
               "RelativeToolTip": "CsvToSvg\\CollectionTransformations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T22:14:30.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Dessin.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Dessin.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Dessin.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Dessin.cs",
               "RelativeToolTip": "CsvToSvg\\Dessin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T15:01:10.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Exceptions.cs",
-              "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Exceptions.cs",
-              "RelativeDocumentMoniker": "CsvToSvg\\Exceptions.cs",
-              "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Exceptions.cs",
-              "RelativeToolTip": "CsvToSvg\\Exceptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T15:00:36.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Transformations.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Transformations.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Transformations.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Transformations.cs",
               "RelativeToolTip": "CsvToSvg\\Transformations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T14:59:10.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Formes.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Formes.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Formes.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Formes.cs",
               "RelativeToolTip": "CsvToSvg\\Formes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T14:56:13.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Forme.cs",
-              "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Forme.cs",
-              "RelativeDocumentMoniker": "CsvToSvg\\Forme.cs",
-              "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Forme.cs",
-              "RelativeToolTip": "CsvToSvg\\Forme.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T14:54:11.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Program.cs",
               "RelativeDocumentMoniker": "CsvToSvg\\Program.cs",
               "ToolTip": "C:\\Users\\croua\\Documents\\GitHub\\CsvToSvg\\CsvToSvg\\Program.cs",
               "RelativeToolTip": "CsvToSvg\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T12:48:25.53Z",
               "EditorCaption": ""

@@ -22,8 +22,8 @@ namespace CsvToSvg
             }
             else
             {
-                cheminCsv = "exemple1.csv";
-                cheminSvg = "exemple1.svg";
+                cheminCsv = "MM.csv";
+                cheminSvg = "MM.svg";
                 if (!File.Exists(cheminCsv))
                 {
                     CreerCsvDemo(cheminCsv);

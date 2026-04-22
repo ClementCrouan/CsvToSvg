@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <ellipse cx="300" cy="300" rx="30" ry="120" style="fill:rgb(180,180,200)" />
+  <ellipse cx="300" cy="180" rx="18" ry="20" style="fill:rgb(160,160,180)" />
+  <ellipse cx="300" cy="430" rx="12" ry="15" style="fill:rgb(160,160,180)" />
+  <polygon points="300,200 220,320 380,320" style="fill:rgb(140,140,160)" />
+  <polygon points="300,270 160,310 160,350 300,330" style="fill:rgb(100,100,130)" />
+  <polygon points="300,270 440,310 440,350 300,330" style="fill:rgb(100,100,130)" />
+  <polygon points="300,390 255,415 255,435 300,420" style="fill:rgb(120,120,150)" />
+  <polygon points="300,390 345,415 345,435 300,420" style="fill:rgb(120,120,150)" />
+  <circle cx="300" cy="195" r="8" style="fill:rgb(220,50,50)" />
+</svg>
